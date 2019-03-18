@@ -6,7 +6,6 @@ pipeline {
     ORG = 'gkaurea'
     APP_NAME = 'jx-spring-boot'
     CHARTMUSEUM_CREDS = credentials('jenkins-x-chartmuseum')
-    TILLER_NAMESPACE = "kube-system"
   }
   stages {
     stage('CI Build and push snapshot') {
