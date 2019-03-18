@@ -13,7 +13,7 @@ public class GreetingController {
 
     @RequestMapping("/greeting")
     public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
-        if(null == name || name.emptry())
+        if(null == name || name.empty() || "World".equals(name))
             name = "gaurav";
 
         return new Greeting(counter.incrementAndGet(),
