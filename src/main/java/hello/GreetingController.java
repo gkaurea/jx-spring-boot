@@ -13,9 +13,6 @@ public class GreetingController {
 
     @RequestMapping("/greeting")
     public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
-        if(null == name || name.isEmpty() || "World".equals(name))
-            name = "gaurav";
-
         return new Greeting(counter.incrementAndGet(),
                             String.format(template, name));
     }
